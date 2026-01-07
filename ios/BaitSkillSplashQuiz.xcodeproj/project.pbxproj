@@ -10,20 +10,32 @@
 		0C80B921A6F3F58F76C31292 /* libPods-BaitSkillSplashQuiz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-BaitSkillSplashQuiz.a */; };
 		103B249CD00B8971F69460F6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		22797038CEB9448A97E3F56F /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99D691B30975442BA2D34948 /* Nunito-Medium.ttf */; };
+		447F81AED7C14A759DDF5ED1 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B35CA29D0AF4940BEC1CA62 /* Nunito-Bold.ttf */; };
+		49A969FABDA84C4497CAD399 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E05342B02C1C4573B87F96BA /* Nunito-Regular.ttf */; };
+		54801E4C0014428793826680 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A8DD342A124D88BEB30F6C /* Nunito-ExtraBold.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		78D3C753A1364BFD916901D3 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57444792C89D43FD8F4F3B1A /* Nunito-SemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		ABB847ABCA78439582EFD646 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652FDF1DA7964253A028A19B /* Nunito-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10A8DD342A124D88BEB30F6C /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/baitSkillFonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BaitSkillSplashQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaitSkillSplashQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BaitSkillSplashQuiz/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BaitSkillSplashQuiz/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = BaitSkillSplashQuiz/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3B35CA29D0AF4940BEC1CA62 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/baitSkillFonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-BaitSkillSplashQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaitSkillSplashQuiz.debug.xcconfig"; path = "Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-BaitSkillSplashQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaitSkillSplashQuiz.release.xcconfig"; path = "Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		57444792C89D43FD8F4F3B1A /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/baitSkillFonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-BaitSkillSplashQuiz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaitSkillSplashQuiz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652FDF1DA7964253A028A19B /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/baitSkillFonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BaitSkillSplashQuiz/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BaitSkillSplashQuiz/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99D691B30975442BA2D34948 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Medium.ttf"; path = "../assets/baitSkillFonts/Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		E05342B02C1C4573B87F96BA /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/baitSkillFonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -60,6 +72,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3CB9139868E2489383DB067F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99D691B30975442BA2D34948 /* Nunito-Medium.ttf */,
+				10A8DD342A124D88BEB30F6C /* Nunito-ExtraBold.ttf */,
+				E05342B02C1C4573B87F96BA /* Nunito-Regular.ttf */,
+				57444792C89D43FD8F4F3B1A /* Nunito-SemiBold.ttf */,
+				3B35CA29D0AF4940BEC1CA62 /* Nunito-Bold.ttf */,
+				652FDF1DA7964253A028A19B /* Nunito-Black.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +100,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				3CB9139868E2489383DB067F /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -161,6 +187,12 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				103B249CD00B8971F69460F6 /* PrivacyInfo.xcprivacy in Resources */,
+				22797038CEB9448A97E3F56F /* Nunito-Medium.ttf in Resources */,
+				54801E4C0014428793826680 /* Nunito-ExtraBold.ttf in Resources */,
+				49A969FABDA84C4497CAD399 /* Nunito-Regular.ttf in Resources */,
+				78D3C753A1364BFD916901D3 /* Nunito-SemiBold.ttf in Resources */,
+				447F81AED7C14A759DDF5ED1 /* Nunito-Bold.ttf in Resources */,
+				ABB847ABCA78439582EFD646 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +223,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +266,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,7 +313,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaitSkillSplashQuiz;
 				PRODUCT_NAME = BaitSkillSplashQuiz;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -300,7 +340,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaitSkillSplashQuiz;
 				PRODUCT_NAME = BaitSkillSplashQuiz;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,10 +416,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +485,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

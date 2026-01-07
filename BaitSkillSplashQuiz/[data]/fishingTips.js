@@ -1,0 +1,17 @@
+export const fishingTips = [
+  'Match the bait color to water clarity\nClear water → natural colors.\nMurky water → bright colors.',
+  'Check your hook sharpness every trip\nA dull hook loses fish.',
+  'Use lighter line when fish are cautious\nSmaller line = more bites.',
+  'Cast beyond your target area\nRetrieve through the strike zone.',
+  'Fish early morning or late evening\nThat’s when fish are most active.',
+  'Slow down in cold water\nFish move less — your bait should too.',
+  'Change bait if there’s no action in 15 minutes\nWaiting longer rarely helps.',
+  'Use scent when fish are pressured\nIt can trigger extra bites.',
+  'Watch the wind direction\nWind pushes food — fish follow it.',
+  'Keep your drag properly set\nToo tight breaks the line, too loose loses fish.',
+  'Hide the hook in soft baits\nImproves hook-up rate and looks more natural.',
+  'Don’t overlook structure\nRocks, logs, and weeds hold fish.',
+  'Downsize your tackle when bites are rare\nSmaller often works better.',
+  'Stay quiet near shallow water\nFish feel vibrations.',
+  'Retie your knot after every few fish\nOne weak knot can ruin the day.',
+];
