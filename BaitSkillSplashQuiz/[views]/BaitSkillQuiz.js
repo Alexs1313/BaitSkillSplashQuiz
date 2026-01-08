@@ -264,7 +264,7 @@ const BaitSkillQuiz = () => {
                 style={sty.levelRow}
                 onPress={() => chooseBaitSkillLevel(lsIdx)}
                 disabled={!isUnlocked}
-                activeOpacity={0.85}
+                activeOpacity={1}
               >
                 <View style={[sty.numberBox, { backgroundColor: boxColor }]}>
                   <Text style={sty.numberText}>{lvl.id}</Text>
@@ -279,18 +279,16 @@ const BaitSkillQuiz = () => {
         </View>
 
         <View style={sty.startWrap}>
-          <View style={sty.startWrap}>
-            <TouchableOpacity
-              style={sty.startButton}
-              activeOpacity={0.85}
-              onPress={() => startSelectedLevel(selectedLevelIndex)}
-              disabled={selectedLevelIndex + 1 > unlockedLevel}
-            >
-              <Text style={sty.startButtonText}>
-                Start level {selectedLevelIndex + 1}
-              </Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={sty.startButton}
+            activeOpacity={0.85}
+            onPress={() => startSelectedLevel(selectedLevelIndex)}
+            disabled={selectedLevelIndex + 1 > unlockedLevel}
+          >
+            <Text style={sty.startButtonText}>
+              Start level {selectedLevelIndex + 1}
+            </Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
@@ -569,10 +567,8 @@ const sty = StyleSheet.create({
     fontSize: 32,
   },
   startWrap: {
-    flex: 1,
-    justifyContent: 'flex-end',
     width: '85%',
-    marginTop: 55,
+    marginTop: 25,
     alignItems: 'center',
   },
   startButton: {

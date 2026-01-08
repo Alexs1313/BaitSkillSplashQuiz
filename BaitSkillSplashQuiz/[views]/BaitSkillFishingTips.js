@@ -136,12 +136,14 @@ const BaitSkillFishingTips = () => {
             </View>
           </View>
         </View>
+        <Image
+          source={require('../../assets/baitSkillImages/baitSkillTips.png')}
+          style={{
+            width: 250,
+            height: 250,
+          }}
+        />
       </ScrollView>
-
-      <Image
-        source={require('../../assets/baitSkillImages/baitSkillTips.png')}
-        style={{ position: 'absolute', bottom: 0, left: 0 }}
-      />
     </View>
   );
 };
@@ -150,7 +152,7 @@ const styles = StyleSheet.create({
   baitSkillWrap: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 74,
+    paddingTop: 54,
   },
   baitSkillScrollView: {
     flexGrow: 1,
@@ -161,7 +163,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 30,
     width: '85%',
-    marginBottom: 60,
+    marginBottom: 30,
   },
   baitSkillText: {
     color: '#000000',
@@ -191,6 +193,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     minWidth: 103,
+    zIndex: 1,
   },
   baitSkillNextButtonText: {
     color: '#000',
