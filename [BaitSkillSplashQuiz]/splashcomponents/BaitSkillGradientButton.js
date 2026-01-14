@@ -1,6 +1,9 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
+const buttonFont = 'Nunito-Black';
+const gradientColors = ['#FD6201', '#FDD300'];
+
 const BaitSkillGradientButton = ({
   onButtonPress,
   buttonLabel,
@@ -19,7 +22,7 @@ const BaitSkillGradientButton = ({
         ...buttonStyles,
       }}
     >
-      <LinearGradient colors={['#FD6201', '#FDD300']} style={s.baitSkillButton}>
+      <LinearGradient colors={gradientColors} style={s.baitSkillButton}>
         <Text style={s.baitSkillButtonText}>{buttonLabel}</Text>
       </LinearGradient>
     </TouchableOpacity>
@@ -36,7 +39,7 @@ const s = StyleSheet.create({
   baitSkillButtonText: {
     color: '#35251D',
     fontSize: 20,
-    fontFamily: 'Nunito-Black',
+    fontFamily: buttonFont,
   },
 });
 

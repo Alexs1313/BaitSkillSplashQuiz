@@ -6,14 +6,14 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import BaitSkillGradientButton from '../[components]/BaitSkillGradientButton';
+import BaitSkillGradientButton from '../splashcomponents/BaitSkillGradientButton';
 
-const BaitSkillHome = () => {
+const SkillSplashHome = () => {
   const router = useNavigation();
 
   return (
     <ImageBackground
-      source={require('../../assets/baitSkillImages/baitSkillback.png')}
+      source={require('../assets/baitSkillImages/baitSkillback.png')}
       style={{ flex: 1 }}
     >
       <ScrollView
@@ -22,7 +22,7 @@ const BaitSkillHome = () => {
       >
         <View style={styles.baitSkillWrap}>
           <Image
-            source={require('../../assets/baitSkillImages/baitSkillFisher.png')}
+            source={require('../assets/baitSkillImages/baitSkillFisher.png')}
           />
 
           <BaitSkillGradientButton
@@ -40,7 +40,7 @@ const BaitSkillHome = () => {
             buttonStyles={styles.baitSkillBtnMarg}
           />
           <BaitSkillGradientButton
-            onButtonPress={() => router.navigate('BaitSkillSavedTips')}
+            onButtonPress={() => router.navigate('SkillSavedTips')}
             buttonLabel="Saved Tips"
             buttonStyles={styles.baitSkillBtnMarg}
           />
@@ -70,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BaitSkillHome;
+export default SkillSplashHome;

@@ -9,13 +9,22 @@ import {
   StyleSheet,
   Share,
   ImageBackground,
+  useWindowDimensions,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { baitSkillLevelsInfo } from '../[data]/baitSkillLevelsInfo';
+import { baitSkillLevelsInfo } from '../splashquizdata/baitSkillLevelsInfo';
+
+const fontEB = 'Nunito-ExtraBold';
+const fontB = 'Nunito-Bold';
+const fontBlack = 'Nunito-Black';
+
+const unlockedLevelsKey = 'quiz_unlocked_level';
+const completedLevelsKey = 'quiz_completed_levels';
+const rewardsKey = 'quiz_rewards';
 
 const BaitSkillQuiz = () => {
   // states =>
-
+  const { width, height } = useWindowDimensions();
   const navigation = useNavigation();
   const [screen, setScreen] = useState('levels');
   const [unlockedLevel, setUnlockedLevel] = useState(1);
@@ -49,12 +58,11 @@ const BaitSkillQuiz = () => {
   useEffect(() => {
     (async () => {
       try {
-        const unlocked = await AsyncStorage.getItem('quiz_unlocked_level');
+        const unlocked = await AsyncStorage.getItem(unlockedLevelsKey);
 
-        const compl = await AsyncStorage.getItem('quiz_completed_levels');
+        const compl = await AsyncStorage.getItem(completedLevelsKey);
 
-        const rewardsData = await AsyncStorage.getItem('quiz_rewards');
-
+        const rewardsData = await AsyncStorage.getItem(rewardsKey);
         if (unlocked) {
           const num = parseInt(unlocked, 10);
           if (!isNaN(num))
@@ -107,16 +115,16 @@ const BaitSkillQuiz = () => {
   const prsstBaitState = async (newUnlocked, newCompleted, newRewards) => {
     try {
       if (typeof newUnlocked === 'number')
-        await AsyncStorage.setItem('quiz_unlocked_level', String(newUnlocked));
+        await AsyncStorage.setItem(unlockedLevelsKey, String(newUnlocked));
 
       if (Array.isArray(newCompleted))
         await AsyncStorage.setItem(
-          'quiz_completed_levels',
+          completedLevelsKey,
           JSON.stringify(newCompleted),
         );
 
       if (Array.isArray(newRewards))
-        await AsyncStorage.setItem('quiz_rewards', JSON.stringify(newRewards));
+        await AsyncStorage.setItem(rewardsKey, JSON.stringify(newRewards));
     } catch (e) {
       console.warn('err!');
     }
@@ -232,19 +240,22 @@ const BaitSkillQuiz = () => {
     <View style={{ flex: 1, backgroundColor: '#004F6F' }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={sty.baitskillscroll}
+        contentContainerStyle={[
+          sty.baitskillscroll,
+          { paddingTop: height * 0.07 },
+        ]}
       >
-        <View style={sty.headerWrap}>
+        <View style={[sty.headerWrap]}>
           <TouchableOpacity
             onPress={() => navigation.goBack && navigation.goBack()}
             activeOpacity={0.8}
           >
             <Image
-              source={require('../../assets/baitSkillImages/baitSkillBackArr.png')}
+              source={require('../assets/baitSkillImages/baitSkillBackArr.png')}
             />
           </TouchableOpacity>
           <Image
-            source={require('../../assets/baitSkillImages/baitSkillQuizTitle.png')}
+            source={require('../assets/baitSkillImages/baitSkillQuizTitle.png')}
           />
         </View>
 
@@ -302,11 +313,11 @@ const BaitSkillQuiz = () => {
 
   const baitQuizScreen = () => (
     <ImageBackground
-      source={require('../../assets/baitSkillImages/quizGameBg.png')}
+      source={require('../assets/baitSkillImages/quizGameBg.png')}
       style={{ flex: 1 }}
     >
       <ScrollView
-        contentContainerStyle={{ flexGrow: 1, paddingTop: 60 }}
+        contentContainerStyle={{ flexGrow: 1, paddingTop: height * 0.06 }}
         showsVerticalScrollIndicator={false}
       >
         <View style={sty.header}>
@@ -315,14 +326,12 @@ const BaitSkillQuiz = () => {
             activeOpacity={0.8}
           >
             <Image
-              source={require('../../assets/baitSkillImages/baitSkillBackArr.png')}
+              source={require('../assets/baitSkillImages/baitSkillBackArr.png')}
             />
           </TouchableOpacity>
-          <Text style={sty.title}>
-            {currentBaitQuizQuestion.baitskilltitle}
-          </Text>
+          <Text style={sty.title}>{currentBaitQuizLevel?.baitskilltitle}</Text>
         </View>
-        <View style={sty.cardWrap}>
+        <View style={[sty.cardWrap, { marginTop: height * 0.02 }]}>
           <Image
             source={currentBaitQuizQuestion.baitskillimage}
             style={sty.questionImage}
@@ -402,9 +411,7 @@ const BaitSkillQuiz = () => {
         </View>
 
         <View style={sty.footer}>
-          <Image
-            source={require('../../assets/baitSkillImages/quizFish.png')}
-          />
+          <Image source={require('../assets/baitSkillImages/quizFish.png')} />
         </View>
       </ScrollView>
     </ImageBackground>
@@ -418,26 +425,29 @@ const BaitSkillQuiz = () => {
       <View style={{ flex: 1, backgroundColor: '#004F6F' }}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={sty.baitskillscroll}
+          contentContainerStyle={[
+            sty.baitskillscroll,
+            { paddingTop: height * 0.06 },
+          ]}
         >
-          <View style={sty.container}>
+          <View style={[sty.container, { paddingTop: height * 0.04 }]}>
             {passed ? (
               <>
                 <View>
                   <Image
-                    source={require('../../assets/baitSkillImages/resultBack.png')}
+                    source={require('../assets/baitSkillImages/resultBack.png')}
                     style={{ position: 'absolute', left: -50 }}
                   />
                   <Image
-                    source={require('../../assets/baitSkillImages/succssesFisher.png')}
+                    source={require('../assets/baitSkillImages/succssesFisher.png')}
                     style={sty.hero}
                   />
                 </View>
                 <Image
-                  source={require('../../assets/baitSkillImages/goodResText.png')}
+                  source={require('../assets/baitSkillImages/goodResText.png')}
                   style={{ marginTop: 20 }}
                 />
-                <Text style={sty.resultSub}>
+                <Text style={[sty.resultSub, { marginBottom: height * 0.02 }]}>
                   You’re one step closer to mastering fishing.
                 </Text>
 
@@ -471,16 +481,16 @@ const BaitSkillQuiz = () => {
               <>
                 <View>
                   <Image
-                    source={require('../../assets/baitSkillImages/resultBack.png')}
+                    source={require('../assets/baitSkillImages/resultBack.png')}
                     style={{ position: 'absolute', left: -50 }}
                   />
                   <Image
-                    source={require('../../assets/baitSkillImages/unluckyFisher.png')}
+                    source={require('../assets/baitSkillImages/unluckyFisher.png')}
                     style={sty.hero}
                   />
                 </View>
                 <Image
-                  source={require('../../assets/baitSkillImages/badResText.png')}
+                  source={require('../assets/baitSkillImages/badResText.png')}
                   style={{ marginTop: 20 }}
                 />
                 <Text style={sty.failSub}>Learn the basics and try again.</Text>
@@ -542,7 +552,7 @@ const sty = StyleSheet.create({
   levelTitle: {
     color: '#FFFFFF',
     fontSize: 20,
-    fontFamily: 'Nunito-Black',
+    fontFamily: fontBlack,
   },
   disabledText: { opacity: 0.5 },
   listWrap: { width: '80%', marginTop: 8 },
@@ -563,7 +573,7 @@ const sty = StyleSheet.create({
   },
   numberText: {
     color: '#000',
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: fontEB,
     fontSize: 32,
   },
   startWrap: {
@@ -582,7 +592,7 @@ const sty = StyleSheet.create({
   },
   startButtonText: {
     color: '#000',
-    fontFamily: 'Nunito-Black',
+    fontFamily: fontBlack,
     fontSize: 20,
   },
   header: {
@@ -594,7 +604,7 @@ const sty = StyleSheet.create({
   title: {
     color: '#FFAA00',
     fontSize: 32,
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: fontEB,
   },
   cardWrap: {
     marginTop: 20,
@@ -610,7 +620,7 @@ const sty = StyleSheet.create({
   questionText: {
     marginTop: 18,
     fontSize: 32,
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: fontEB,
     color: '#14243E',
     textAlign: 'center',
     marginBottom: 40,
@@ -632,7 +642,7 @@ const sty = StyleSheet.create({
     justifyContent: 'center',
   },
   optionText: {
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: fontEB,
     fontSize: 14,
     color: '#000',
     textAlign: 'center',
@@ -642,7 +652,7 @@ const sty = StyleSheet.create({
   footer: { marginTop: 46, alignItems: 'flex-end' },
   progressText: {
     color: '#00111C',
-    fontFamily: 'Nunito-Bold',
+    fontFamily: fontB,
     marginBottom: 12,
   },
   footerButtons: { flexDirection: 'row', gap: 12 },
@@ -652,7 +662,7 @@ const sty = StyleSheet.create({
     paddingHorizontal: 18,
     borderRadius: 10,
   },
-  shareText: { color: '#000', fontFamily: 'Nunito-ExtraBold' },
+  shareText: { color: '#000', fontFamily: fontEB },
   quitBtn: {
     backgroundColor: '#FEF4D1',
     paddingVertical: 10,
@@ -661,19 +671,19 @@ const sty = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#00111C',
   },
-  quitText: { color: '#000', fontFamily: 'Nunito-Bold' },
+  quitText: { color: '#000', fontFamily: fontB },
   container: { paddingTop: 74, alignItems: 'center', paddingHorizontal: 20 },
   hero: { resizeMode: 'contain', marginTop: 20 },
   resultTitle: {
     color: '#FFAA00',
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: fontEB,
     fontSize: 28,
     textAlign: 'center',
     marginTop: 8,
   },
   resultSub: {
     color: '#FFFFFF',
-    fontFamily: 'Nunito-Bold',
+    fontFamily: fontB,
     fontSize: 16,
     textAlign: 'center',
     marginTop: 8,
@@ -681,7 +691,7 @@ const sty = StyleSheet.create({
   },
   failTitle: {
     color: '#FF8A00',
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: fontEB,
     fontSize: 28,
     textAlign: 'center',
     marginTop: 8,

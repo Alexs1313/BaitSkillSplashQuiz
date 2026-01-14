@@ -8,13 +8,18 @@ import {
   TouchableOpacity,
   View,
   Share,
+  useWindowDimensions,
 } from 'react-native';
-import { useStore } from '../[store]/baitSkillContext';
-import BaitSkillGradientButton from '../[components]/BaitSkillGradientButton';
+import { useStore } from '../skillsplashstore/baitSkillContext';
+import BaitSkillGradientButton from '../splashcomponents/BaitSkillGradientButton';
 
-const BaitSkillSavedTips = () => {
+const font = 'Nunito-ExtraBold';
+const backColor = '#004F6F';
+
+const SkillSavedTips = () => {
   const router = useNavigation();
   const { getSavedTips, savedTips, handleRemoveBaitTip } = useStore();
+  const { height } = useWindowDimensions();
 
   useEffect(() => {
     getSavedTips();
@@ -38,24 +43,24 @@ const BaitSkillSavedTips = () => {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#004F6F' }}>
+    <View style={{ flex: 1, backgroundColor: backColor }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.baitSkillScrollView}
       >
-        <View style={styles.baitSkillWrap}>
+        <View style={[styles.baitSkillWrap, { paddingTop: height * 0.06 }]}>
           <View style={styles.baitSkillHeader}>
             <TouchableOpacity
               onPress={() => router.goBack()}
               activeOpacity={0.8}
             >
               <Image
-                source={require('../../assets/baitSkillImages/baitSkillBackArr.png')}
+                source={require('../assets/baitSkillImages/baitSkillBackArr.png')}
               />
             </TouchableOpacity>
 
             <Image
-              source={require('../../assets/baitSkillImages/baitSkillSavedTitle.png')}
+              source={require('../assets/baitSkillImages/baitSkillSavedTitle.png')}
             />
           </View>
 
@@ -63,7 +68,7 @@ const BaitSkillSavedTips = () => {
             savedTips.map((tip, idx) => (
               <View key={`${idx}-${tip}`} style={styles.baitSkillTipContainer}>
                 <Image
-                  source={require('../../assets/baitSkillImages/baitSkillFish.png')}
+                  source={require('../assets/baitSkillImages/baitSkillFish.png')}
                 />
                 <Text style={styles.baitSkillText}>{tip}</Text>
 
@@ -73,7 +78,7 @@ const BaitSkillSavedTips = () => {
                     activeOpacity={0.8}
                   >
                     <Image
-                      source={require('../../assets/baitSkillImages/baitSkillShare.png')}
+                      source={require('../assets/baitSkillImages/baitSkillShare.png')}
                     />
                   </TouchableOpacity>
 
@@ -82,7 +87,7 @@ const BaitSkillSavedTips = () => {
                     activeOpacity={0.8}
                   >
                     <Image
-                      source={require('../../assets/baitSkillImages/baitSkillIsSvd.png')}
+                      source={require('../assets/baitSkillImages/baitSkillIsSvd.png')}
                     />
                   </TouchableOpacity>
                 </View>
@@ -136,7 +141,7 @@ const styles = StyleSheet.create({
   baitSkillText: {
     color: '#000000',
     fontSize: 16,
-    fontFamily: 'Nunito-ExtraBold',
+    fontFamily: font,
     textAlign: 'center',
     marginTop: 10,
   },
@@ -163,4 +168,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BaitSkillSavedTips;
+export default SkillSavedTips;

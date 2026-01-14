@@ -8,14 +8,16 @@ import {
   TouchableOpacity,
   View,
   Share,
+  useWindowDimensions,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useStore } from '../[store]/baitSkillContext';
+import { useStore } from '../skillsplashstore/baitSkillContext';
 
 const BaitSkillFishingTips = () => {
   const router = useNavigation();
   const [currentBaitTipIndex, setCurrentBaitTipIndex] = useState(0);
   const { getSavedTips, savedTips, setSavedTips } = useStore();
+  const { height } = useWindowDimensions();
 
   useEffect(() => {
     getSavedTips();
@@ -85,35 +87,35 @@ const BaitSkillFishingTips = () => {
     <View style={{ flex: 1, backgroundColor: '#004F6F' }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.baitSkillScrollView}
+        contentContainerStyle={[styles.baitSkillScrollView]}
       >
-        <View style={styles.baitSkillWrap}>
+        <View style={[styles.baitSkillWrap, { paddingTop: height * 0.04 }]}>
           <View style={styles.baitSkillHeader}>
             <TouchableOpacity
               onPress={() => router.goBack()}
               activeOpacity={0.8}
             >
               <Image
-                source={require('../../assets/baitSkillImages/baitSkillBackArr.png')}
+                source={require('../assets/baitSkillImages/baitSkillBackArr.png')}
                 style={{}}
               />
             </TouchableOpacity>
 
             <Image
-              source={require('../../assets/baitSkillImages/baitSkillTitle.png')}
+              source={require('../assets/baitSkillImages/baitSkillTitle.png')}
             />
           </View>
 
           <View style={styles.baitSkillTipContainer}>
             <Image
-              source={require('../../assets/baitSkillImages/baitSkillFish.png')}
+              source={require('../assets/baitSkillImages/baitSkillFish.png')}
             />
             <Text style={styles.baitSkillText}>{currentTip}</Text>
 
             <View style={styles.baitSkillButtonsWrap}>
               <TouchableOpacity onPress={handleShareBaitTip}>
                 <Image
-                  source={require('../../assets/baitSkillImages/baitSkillShare.png')}
+                  source={require('../assets/baitSkillImages/baitSkillShare.png')}
                 />
               </TouchableOpacity>
 
@@ -128,8 +130,8 @@ const BaitSkillFishingTips = () => {
                 <Image
                   source={
                     !isSavedTip
-                      ? require('../../assets/baitSkillImages/baitSkillSaved.png')
-                      : require('../../assets/baitSkillImages/baitSkillIsSvd.png')
+                      ? require('../assets/baitSkillImages/baitSkillSaved.png')
+                      : require('../assets/baitSkillImages/baitSkillIsSvd.png')
                   }
                 />
               </TouchableOpacity>
@@ -137,7 +139,7 @@ const BaitSkillFishingTips = () => {
           </View>
         </View>
         <Image
-          source={require('../../assets/baitSkillImages/baitSkillTips.png')}
+          source={require('../assets/baitSkillImages/baitSkillTips.png')}
           style={{
             width: 250,
             height: 250,

@@ -4,7 +4,7 @@ export const baitSkillLevelsInfo = [
     baitskilltitle: 'Fishing Basics',
     baitskillquestions: [
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl1.1.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl1.1.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'Single Hook',
@@ -15,7 +15,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 0,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl1.2.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl1.2.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'Fishing Float',
@@ -26,13 +26,13 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 0,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl1.3.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl1.3.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: ['Crucian Carp', 'Common Roach', 'Tench', 'Bream'],
         baitskillcorrectIndex: 0,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl1.4.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl1.4.png'),
         baitskillquestion: 'What is this used for?',
         baitskilloptions: [
           'To sink the bait',
@@ -43,7 +43,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 0,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl1.5.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl1.5.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: [
           'Common Carp',
@@ -54,7 +54,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 0,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl1.6.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl1.6.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'Fishing Line',
@@ -71,7 +71,7 @@ export const baitSkillLevelsInfo = [
     baitskilltitle: 'Hooks & Sinkers',
     baitskillquestions: [
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl2.1.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl2.1.png'),
         baitskillquestion: 'What type of hook is this?',
         baitskilloptions: [
           'Treble Hook',
@@ -82,13 +82,13 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl2.2.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl2.2.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: ['Jig Head', 'Treble Hook', 'Split Ring', 'Sinker'],
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl2.3.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl2.3.png'),
         baitskillquestion: 'What is this used for?',
         baitskilloptions: [
           'To attract fish',
@@ -99,7 +99,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl2.4.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl2.4.png'),
         baitskillquestion: 'What type of hook is this?',
         baitskilloptions: [
           'Circle Hook',
@@ -110,7 +110,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl2.5.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl2.5.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'Leader Clip',
@@ -121,7 +121,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl2.6.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl2.6.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'Split Ring',
@@ -138,13 +138,13 @@ export const baitSkillLevelsInfo = [
     baitskilltitle: 'Lures & Baits',
     baitskillquestions: [
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl3.1.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl3.1.png'),
         baitskillquestion: 'What lure is this?',
         baitskilloptions: ['Spoon Lure', 'Jig Head', 'Wobbler', 'Spinnerbait'],
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl3.2.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl3.2.png'),
         baitskillquestion: 'What lure is this?',
         baitskilloptions: [
           'Spinner',
@@ -155,13 +155,13 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl3.3.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl3.3.png'),
         baitskillquestion: 'What lure is this?',
         baitskilloptions: ['Spoon Lure', 'Spinner', 'Jig Head', 'Wobbler'],
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl3.4.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl3.4.png'),
         baitskillquestion: 'What bait is this?',
         baitskilloptions: [
           'Feeder Cage',
@@ -172,7 +172,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl3.5.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl3.5.png'),
         baitskillquestion: 'What is this used for?',
         baitskilloptions: [
           'To hold groundbait',
@@ -183,7 +183,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl3.6.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl3.6.png'),
         baitskillquestion: 'What bait is this?',
         baitskilloptions: [
           'Sink Weight',
@@ -200,37 +200,37 @@ export const baitSkillLevelsInfo = [
     baitskilltitle: 'Fish Species',
     baitskillquestions: [
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl4.1.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl4.1.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: ['Muskie', 'Pike', 'Zander', 'Perch'],
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl4.2.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl4.2.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: ['Ruffe', 'Perch', 'Roach', 'Chub'],
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl4.3.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl4.3.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: ['Pike', 'Zander', 'Catfish', 'Carp'],
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl4.4.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl4.4.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: ['Tench', 'Roach', 'Bream', 'Silver Carp'],
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl4.5.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl4.5.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: ['Eel', 'Pike', 'Catfish', 'Carp'],
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl4.6.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl4.6.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: [
           'Common Carp',
@@ -247,13 +247,13 @@ export const baitSkillLevelsInfo = [
     baitskilltitle: 'Gear & Techniques',
     baitskillquestions: [
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl5.1.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl5.1.png'),
         baitskillquestion: 'What type of rod is this?',
         baitskilloptions: ['Feeder Rod', 'Spinning Rod', 'Carp Rod', 'Fly Rod'],
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl5.2.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl5.2.png'),
         baitskillquestion: 'What type of rod is this?',
         baitskilloptions: [
           'Match Rod',
@@ -264,7 +264,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl5.3.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl5.3.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'Fly Reel',
@@ -275,7 +275,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl5.4.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl5.4.png'),
         baitskillquestion: 'What fishing setup is this?',
         baitskilloptions: [
           'Drop Shot Rig',
@@ -286,7 +286,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 2,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl5.5.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl5.5.png'),
         baitskillquestion: 'What is this used for?',
         baitskilloptions: [
           'To store fish',
@@ -297,7 +297,7 @@ export const baitSkillLevelsInfo = [
         baitskillcorrectIndex: 1,
       },
       {
-        baitskillimage: require('../../assets/baitSkillImages/quizlvl5.6.png'),
+        baitskillimage: require('../assets/baitSkillImages/quizlvl5.6.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
           'GPS Tracker',

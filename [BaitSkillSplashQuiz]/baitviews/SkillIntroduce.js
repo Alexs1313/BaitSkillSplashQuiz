@@ -10,48 +10,55 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const BaitSkillIntroduce = () => {
+const backgroundColor = '#0A6064';
+const primaryColorFff = '#fff';
+const primaryOrange = '#FD7701';
+
+// onboard screens data =>
+
+const introduceScreens = [
+  {
+    baitSkillTitle: 'WELCOME TO BAIT SKILL',
+    baitSkillSubtitle: 'Think you really know fishing? Let’s check.',
+    baitSkillImage: require('../assets/baitSkillImages/baitSkillIntro1.png'),
+  },
+  {
+    baitSkillTitle: 'NAME IT RIGHT',
+    baitSkillSubtitle: 'Look at the image. Pick 1 correct answer out of 4.',
+    baitSkillImage: require('../assets/baitSkillImages/baitSkillIntro2.png'),
+  },
+  {
+    baitSkillTitle: 'SKILL EARNS REWARDS',
+    baitSkillSubtitle: '6 levels. 1 reward for each.',
+    baitSkillImage: require('../assets/baitSkillImages/baitSkillIntro3.png'),
+  },
+  {
+    baitSkillTitle: 'FISHING TIPS FROM A PRO',
+    baitSkillSubtitle: 'Learn real tricks. Save the best ones.',
+    baitSkillImage: require('../assets/baitSkillImages/baitSkillIntro4.png'),
+  },
+];
+
+const SkillIntroduce = () => {
   const [introduceIndex, setIntroduceIndex] = useState(0);
   const router = useNavigation();
-
-  const introduceScreens = [
-    {
-      baitSkillTitle: 'WELCOME TO BAIT SKILL',
-      baitSkillSubtitle: 'Think you really know fishing? Let’s check.',
-      baitSkillImage: require('../../assets/baitSkillImages/baitSkillIntro1.png'),
-    },
-    {
-      baitSkillTitle: 'NAME IT RIGHT',
-      baitSkillSubtitle: 'Look at the image. Pick 1 correct answer out of 4.',
-      baitSkillImage: require('../../assets/baitSkillImages/baitSkillIntro2.png'),
-    },
-    {
-      baitSkillTitle: 'SKILL EARNS REWARDS',
-      baitSkillSubtitle: '6 levels. 1 reward for each.',
-      baitSkillImage: require('../../assets/baitSkillImages/baitSkillIntro3.png'),
-    },
-    {
-      baitSkillTitle: 'FISHING TIPS FROM A PRO',
-      baitSkillSubtitle: 'Learn real tricks. Save the best ones.',
-      baitSkillImage: require('../../assets/baitSkillImages/baitSkillIntro4.png'),
-    },
-  ];
 
   const onNextButtonPress = () => {
     introduceIndex < 3
       ? setIntroduceIndex(introduceIndex + 1)
-      : router.navigate('BaitSkillHome');
+      : router.navigate('SkillSplashHome');
   };
 
   const onSkipButtonPress = () => {
-    router.navigate('BaitSkillHome');
+    router.navigate('SkillSplashHome');
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#0A6064' }}>
+    <View style={{ flex: 1, backgroundColor: backgroundColor }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={ui.baitSkillScrollView}
+        bounces={false}
       >
         <View style={ui.baitSkillWrap}>
           <View style={{ width: '100%' }}>
@@ -121,14 +128,14 @@ const ui = StyleSheet.create({
   },
   baitSkillTitle: {
     fontSize: 36,
-    color: '#FFFFFF',
+    color: primaryColorFff,
     fontWeight: '800',
     textAlign: 'center',
     width: '70%',
   },
   baitSkillSecondaryTitle: {
     fontSize: 24,
-    color: '#FFFFFF',
+    color: primaryColorFff,
     fontWeight: '500',
     marginTop: 10,
     textAlign: 'center',
@@ -136,7 +143,7 @@ const ui = StyleSheet.create({
   },
   baitSkillButton: {
     marginTop: 30,
-    backgroundColor: '#FD7701',
+    backgroundColor: primaryOrange,
     paddingVertical: 5,
     paddingHorizontal: 45,
     borderRadius: 9,
@@ -146,7 +153,7 @@ const ui = StyleSheet.create({
     minWidth: 157,
   },
   baitSkillButtonText: {
-    color: '#FFFFFF',
+    color: primaryColorFff,
     fontSize: 24,
     fontWeight: '700',
     fontStyle: 'italic',
@@ -164,4 +171,4 @@ const ui = StyleSheet.create({
   },
 });
 
-export default BaitSkillIntroduce;
+export default SkillIntroduce;

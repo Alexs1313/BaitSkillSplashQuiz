@@ -1,13 +1,13 @@
+import BaitSkillStackNavigator from './[BaitSkillSplashQuiz]/baitskillroutes/BaitSkillStackNavigator';
+import { Context } from './[BaitSkillSplashQuiz]/skillsplashstore/baitSkillContext';
 import { NavigationContainer } from '@react-navigation/native';
-import BaitSkillStackNavigator from './BaitSkillSplashQuiz/[routes]/BaitSkillStackNavigator';
-import { BaitSkillStore } from './BaitSkillSplashQuiz/[store]/baitSkillContext';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <BaitSkillStore>
+      <Context>
         <BaitSkillStackNavigator />
-      </BaitSkillStore>
+      </Context>
     </NavigationContainer>
   );
 };

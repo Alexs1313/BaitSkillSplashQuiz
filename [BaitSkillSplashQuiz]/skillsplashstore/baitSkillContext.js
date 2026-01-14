@@ -7,9 +7,11 @@ export const useStore = () => {
   return useContext(StoreContext);
 };
 
-export const BaitSkillStore = ({ children }) => {
+export const Context = ({ children }) => {
   const [savedTips, setSavedTips] = useState([]);
   const [rewards, setRewards] = useState([false, false, false, false, false]);
+
+  // saved tips
 
   const getSavedTips = async () => {
     try {
@@ -29,6 +31,8 @@ export const BaitSkillStore = ({ children }) => {
     }
   };
 
+  // remove tip
+
   const handleRemoveBaitTip = async tip => {
     try {
       const updatedTips = savedTips.filter(svTip => svTip !== tip);
@@ -45,6 +49,8 @@ export const BaitSkillStore = ({ children }) => {
     }
   };
 
+  // rewards
+
   const getSavedRewards = async () => {
     try {
       const savedRewards = await AsyncStorage.getItem('quiz_rewards');
@@ -58,11 +64,13 @@ export const BaitSkillStore = ({ children }) => {
           return;
         }
       }
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
     setRewards([false, false, false, false, false]);
   };
 
-  const value = {
+  const contextvalues = {
     getSavedTips,
     savedTips,
     setSavedTips,
@@ -73,6 +81,8 @@ export const BaitSkillStore = ({ children }) => {
   };
 
   return (
-    <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
+    <StoreContext.Provider value={contextvalues}>
+      {children}
+    </StoreContext.Provider>
   );
 };

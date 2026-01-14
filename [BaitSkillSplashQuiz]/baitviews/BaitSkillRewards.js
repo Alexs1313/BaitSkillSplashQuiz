@@ -7,12 +7,17 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
+  useWindowDimensions,
 } from 'react-native';
-import { useStore } from '../[store]/baitSkillContext';
+import { useStore } from '../skillsplashstore/baitSkillContext';
+
+const back = require('../assets/baitSkillImages/storeBg.png');
 
 const BaitSkillRewards = () => {
   const router = useNavigation();
   const { rewards, getSavedRewards } = useStore();
+
+  const { height } = useWindowDimensions();
 
   useEffect(() => {
     getSavedRewards();
@@ -27,37 +32,37 @@ const BaitSkillRewards = () => {
   ];
 
   const rewardsImgs = [
-    require('../../assets/baitSkillImages/rewardLvl1.png'),
-    require('../../assets/baitSkillImages/rewardLvl2.png'),
-    require('../../assets/baitSkillImages/rewardLvl3.png'),
-    require('../../assets/baitSkillImages/rewardLvl4.png'),
-    require('../../assets/baitSkillImages/rewardLvl5.png'),
+    require('../assets/baitSkillImages/rewardLvl1.png'),
+    require('../assets/baitSkillImages/rewardLvl2.png'),
+    require('../assets/baitSkillImages/rewardLvl3.png'),
+    require('../assets/baitSkillImages/rewardLvl4.png'),
+    require('../assets/baitSkillImages/rewardLvl5.png'),
   ];
 
   return (
-    <ImageBackground
-      source={require('../../assets/baitSkillImages/storeBg.png')}
-      style={{ flex: 1 }}
-    >
+    <ImageBackground source={back} style={{ flex: 1 }}>
       <View style={styles.baitSkillBox}>
         <ScrollView
-          contentContainerStyle={styles.baitSkillScroll}
+          contentContainerStyle={[
+            styles.baitSkillScroll,
+            { paddingTop: height * 0.06 },
+          ]}
           showsVerticalScrollIndicator={false}
         >
           <View style={styles.baitSkillHeader}>
             <TouchableOpacity onPress={() => router.goBack()}>
               <Image
-                source={require('../../assets/baitSkillImages/baitSkillBackArr.png')}
+                source={require('../assets/baitSkillImages/baitSkillBackArr.png')}
               />
             </TouchableOpacity>
             <Image
-              source={require('../../assets/baitSkillImages/rewardsTitlte.png')}
+              source={require('../assets/baitSkillImages/rewardsTitlte.png')}
             />
           </View>
 
           <View style={styles.baitSkillStage}>
             <ImageBackground
-              source={require('../../assets/baitSkillImages/rewardShelf.png')}
+              source={require('../assets/baitSkillImages/rewardShelf.png')}
               style={styles.baitSkillShelf}
               resizeMode="contain"
             >
@@ -83,7 +88,7 @@ const BaitSkillRewards = () => {
             </ImageBackground>
 
             <Image
-              source={require('../../assets/baitSkillImages/rewardChar.png')}
+              source={require('../assets/baitSkillImages/rewardChar.png')}
               style={styles.baitSkillChar}
               resizeMode="contain"
             />
