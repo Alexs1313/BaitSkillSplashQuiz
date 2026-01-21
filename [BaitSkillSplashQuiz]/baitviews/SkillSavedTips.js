@@ -12,9 +12,10 @@ import {
 } from 'react-native';
 import { useStore } from '../skillsplashstore/baitSkillContext';
 import BaitSkillGradientButton from '../splashcomponents/BaitSkillGradientButton';
+import LinearGradient from 'react-native-linear-gradient';
 
 const font = 'Nunito-ExtraBold';
-const backColor = '#004F6F';
+const gradient = ['#056085ff', '#012c45ff'];
 
 const SkillSavedTips = () => {
   const router = useNavigation();
@@ -43,12 +44,12 @@ const SkillSavedTips = () => {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: backColor }}>
+    <LinearGradient colors={gradient} style={{ flex: 1 }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.baitSkillScrollView}
       >
-        <View style={[styles.baitSkillWrap, { paddingTop: height * 0.06 }]}>
+        <View style={[styles.baitSkillWrap, { paddingTop: height * 0.07 }]}>
           <View style={styles.baitSkillHeader}>
             <TouchableOpacity
               onPress={() => router.goBack()}
@@ -117,7 +118,7 @@ const SkillSavedTips = () => {
           )}
         </View>
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -125,11 +126,10 @@ const styles = StyleSheet.create({
   baitSkillWrap: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 74,
   },
   baitSkillScrollView: {
     flexGrow: 1,
-    minHeight: 600,
+    minHeight: 650,
   },
   baitSkillHeader: {
     flexDirection: 'row',

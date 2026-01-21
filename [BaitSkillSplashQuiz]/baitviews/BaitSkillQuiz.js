@@ -13,6 +13,9 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { baitSkillLevelsInfo } from '../splashquizdata/baitSkillLevelsInfo';
+import LinearGradient from 'react-native-linear-gradient';
+import { useStore } from '../skillsplashstore/baitSkillContext';
+import Toast from 'react-native-toast-message';
 
 const fontEB = 'Nunito-ExtraBold';
 const fontB = 'Nunito-Bold';
@@ -36,7 +39,7 @@ const BaitSkillQuiz = () => {
   const [disabled, setDisabled] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const timerRef = useRef(null);
-
+  const { splashNotificationsEnabled } = useStore();
   // share =>
 
   const handleShareQuizRes = async () => {
@@ -205,6 +208,17 @@ const BaitSkillQuiz = () => {
 
     setUnlockedLevel(newUnlocked);
 
+    splashNotificationsEnabled &&
+      Toast.show({
+        type: passedQuiz ? 'success' : 'error',
+        text1: passedQuiz ? 'Level completed!' : 'Level failed!',
+        text2: passedQuiz
+          ? 'Congratulations on completing the level!'
+          : 'Better luck next time!',
+        position: 'bottom',
+        visibilityTime: 2000,
+      });
+
     await prsstBaitState(newUnlocked, newCompleted, newBaitSkillRewards);
     setScreen('result');
   };
@@ -237,7 +251,7 @@ const BaitSkillQuiz = () => {
   // levels screen =>
 
   const baitLevelsScreen = () => (
-    <View style={{ flex: 1, backgroundColor: '#004F6F' }}>
+    <LinearGradient colors={['#056085ff', '#012c45ff']} style={{ flex: 1 }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[
@@ -302,7 +316,7 @@ const BaitSkillQuiz = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 
   const currentBaitQuizLevel = baitSkillLevelsInfo[selectedLevelIndex];

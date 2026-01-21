@@ -7,6 +7,7 @@ import BaitSkillRewards from '../baitviews/BaitSkillRewards';
 import SkillSavedTips from '../baitviews/SkillSavedTips';
 import SkillIntroduce from '../baitviews/SkillIntroduce';
 import SkillSplashHome from '../baitviews/SkillSplashHome';
+import SkillSettingsScreen from '../baitviews/SkillSettingsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,10 @@ const BaitSkillStackNavigator = () => {
       <Stack.Screen name="SkillSavedTips" component={SkillSavedTips} />
       <Stack.Screen name="BaitSkillQuiz" component={BaitSkillQuiz} />
       <Stack.Screen name="BaitSkillRewards" component={BaitSkillRewards} />
+      <Stack.Screen
+        name="SkillSettingsScreen"
+        component={SkillSettingsScreen}
+      />
     </Stack.Navigator>
   );
 };

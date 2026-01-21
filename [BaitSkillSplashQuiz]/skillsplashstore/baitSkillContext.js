@@ -7,10 +7,12 @@ export const useStore = () => {
   return useContext(StoreContext);
 };
 
-export const Context = ({ children }) => {
+export const StorageProvider = ({ children }) => {
   const [savedTips, setSavedTips] = useState([]);
   const [rewards, setRewards] = useState([false, false, false, false, false]);
-
+  const [splashNotificationsEnabled, setSplashNotificationsEnabled] =
+    useState(false);
+  const [splashSoundEnabled, setSplashSoundEnabled] = useState(false);
   // saved tips
 
   const getSavedTips = async () => {
@@ -78,6 +80,10 @@ export const Context = ({ children }) => {
     rewards,
     getSavedRewards,
     setRewards,
+    splashNotificationsEnabled,
+    setSplashNotificationsEnabled,
+    splashSoundEnabled,
+    setSplashSoundEnabled,
   };
 
   return (

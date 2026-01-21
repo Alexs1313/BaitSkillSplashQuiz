@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import {
   Image,
   ImageBackground,
@@ -7,9 +7,124 @@ import {
   View,
 } from 'react-native';
 import BaitSkillGradientButton from '../splashcomponents/BaitSkillGradientButton';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useCallback, useEffect, useState } from 'react';
+import Sound from 'react-native-sound';
+import { useStore } from '../skillsplashstore/baitSkillContext';
 
 const SkillSplashHome = () => {
   const router = useNavigation();
+
+  const [splashMusIdx, setSplashMusIdx] = useState(0);
+  const [sound, setSound] = useState(null);
+  const baitSplashTracksCycle = [
+    'lets-go-fishing-270521.mp3',
+    'lets-go-fishing-270521.mp3',
+  ];
+  const {
+    setSplashNotificationsEnabled,
+    splashSoundEnabled,
+    setSplashSoundEnabled,
+  } = useStore();
+
+  useFocusEffect(
+    useCallback(() => {
+      loadSplashBgMusic();
+      loadSplashVibration();
+    }, []),
+  );
+
+  useEffect(() => {
+    playSplashMusic(splashMusIdx);
+
+    return () => {
+      if (sound) {
+        sound.stop(() => {
+          sound.release();
+        });
+      }
+    };
+  }, [splashMusIdx]);
+
+  const playSplashMusic = index => {
+    if (sound) {
+      sound.stop(() => {
+        sound.release();
+      });
+    }
+
+    const splashTrackPath = baitSplashTracksCycle[index];
+
+    const newSplashGameSound = new Sound(
+      splashTrackPath,
+
+      Sound.MAIN_BUNDLE,
+
+      error => {
+        if (error) {
+          console.log('Error =>', error);
+          return;
+        }
+
+        newSplashGameSound.play(success => {
+          if (success) {
+            setSplashMusIdx(
+              prevIndex => (prevIndex + 1) % baitSplashTracksCycle.length,
+            );
+          } else {
+            console.log('Error =>');
+          }
+        });
+        setSound(newSplashGameSound);
+      },
+    );
+  };
+
+  useEffect(() => {
+    const setVolumeGameMusic = async () => {
+      try {
+        const splashMusicValue = await AsyncStorage.getItem('toggleSound');
+
+        const isSplashMusicOn = JSON.parse(splashMusicValue);
+        setSplashSoundEnabled(isSplashMusicOn);
+        if (sound) {
+          sound.setVolume(isSplashMusicOn ? 1 : 0);
+        }
+      } catch (error) {
+        console.error('Error =>', error);
+      }
+    };
+
+    setVolumeGameMusic();
+  }, [sound]);
+
+  useEffect(() => {
+    if (sound) {
+      sound.setVolume(splashSoundEnabled ? 1 : 0);
+    }
+  }, [splashSoundEnabled]);
+
+  const loadSplashVibration = async () => {
+    try {
+      const splashNotValue = await AsyncStorage.getItem('toggleNotifications');
+      if (splashNotValue !== null) {
+        const isSplashVibrationOn = JSON.parse(splashNotValue);
+        setSplashNotificationsEnabled(isSplashVibrationOn);
+      }
+    } catch (error) {
+      console.error('Error!', error);
+    }
+  };
+
+  const loadSplashBgMusic = async () => {
+    try {
+      const splashMusicValue = await AsyncStorage.getItem('toggleSound');
+      const isSplashMusicOn = JSON.parse(splashMusicValue);
+      setSplashSoundEnabled(isSplashMusicOn);
+    } catch (error) {
+      console.error('Error loading settings =>', error);
+    }
+  };
 
   return (
     <ImageBackground
@@ -42,6 +157,11 @@ const SkillSplashHome = () => {
           <BaitSkillGradientButton
             onButtonPress={() => router.navigate('SkillSavedTips')}
             buttonLabel="Saved Tips"
+            buttonStyles={styles.baitSkillBtnMarg}
+          />
+          <BaitSkillGradientButton
+            onButtonPress={() => router.navigate('SkillSettingsScreen')}
+            buttonLabel="Settings"
             buttonStyles={styles.baitSkillBtnMarg}
           />
         </View>

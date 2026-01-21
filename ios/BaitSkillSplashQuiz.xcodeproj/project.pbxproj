@@ -14,6 +14,10 @@
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		86C54901761C4C7896EE03C9 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15A9062665F048E19795D02B /* Nunito-Regular.ttf */; };
+		D1BAE1522F2103160094EA86 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BAE1512F2103160094EA86 /* AVKit.framework */; };
+		D1BAE1542F21031C0094EA86 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BAE1532F21031C0094EA86 /* AudioToolbox.framework */; };
+		D1BAE1562F2103220094EA86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BAE1552F2103220094EA86 /* AVFoundation.framework */; };
+		D1BAE1582F21032E0094EA86 /* lets-go-fishing-270521.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1BAE1572F21032E0094EA86 /* lets-go-fishing-270521.mp3 */; };
 		DB38C9804BA149799CBE8640 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55F8A9BB466D4B7789640310 /* Nunito-ExtraBold.ttf */; };
 		EC1F9806C38C4B83A158C488 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A85A3697EE4AD09EC67426 /* Nunito-SemiBold.ttf */; };
 		F0B9742007B14A15BE1BB665 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CE1F8FDDCAE4665B837D5CC /* Nunito-Black.ttf */; };
@@ -36,6 +40,10 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BaitSkillSplashQuiz/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BaitSkillSplashQuiz/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFCED084515942FCAD2D96BC /* Nunito-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Medium.ttf"; path = "../[BaitSkillSplashQuiz]/assets/baitSkillFonts/Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		D1BAE1512F2103160094EA86 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D1BAE1532F21031C0094EA86 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D1BAE1552F2103220094EA86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D1BAE1572F21032E0094EA86 /* lets-go-fishing-270521.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "lets-go-fishing-270521.mp3"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -44,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BAE1562F2103220094EA86 /* AVFoundation.framework in Frameworks */,
+				D1BAE1542F21031C0094EA86 /* AudioToolbox.framework in Frameworks */,
+				D1BAE1522F2103160094EA86 /* AVKit.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-BaitSkillSplashQuiz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +77,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1BAE1552F2103220094EA86 /* AVFoundation.framework */,
+				D1BAE1532F21031C0094EA86 /* AudioToolbox.framework */,
+				D1BAE1512F2103160094EA86 /* AVKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-BaitSkillSplashQuiz.a */,
 			);
@@ -81,6 +95,7 @@
 				75A85A3697EE4AD09EC67426 /* Nunito-SemiBold.ttf */,
 				144426790C3E48758BEDAB9D /* Nunito-Bold.ttf */,
 				1CE1F8FDDCAE4665B837D5CC /* Nunito-Black.ttf */,
+				D1BAE1572F21032E0094EA86 /* lets-go-fishing-270521.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 				86C54901761C4C7896EE03C9 /* Nunito-Regular.ttf in Resources */,
 				EC1F9806C38C4B83A158C488 /* Nunito-SemiBold.ttf in Resources */,
 				FCDA2E7D0EF149BE91B088F2 /* Nunito-Bold.ttf in Resources */,
+				D1BAE1582F21032E0094EA86 /* lets-go-fishing-270521.mp3 in Resources */,
 				F0B9742007B14A15BE1BB665 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,13 +239,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,13 +278,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaitSkillSplashQuiz/Pods-BaitSkillSplashQuiz-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -416,7 +424,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -485,7 +496,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

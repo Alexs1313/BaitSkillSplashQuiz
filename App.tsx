@@ -1,13 +1,17 @@
+import Toast from 'react-native-toast-message';
 import BaitSkillStackNavigator from './[BaitSkillSplashQuiz]/baitskillroutes/BaitSkillStackNavigator';
-import { Context } from './[BaitSkillSplashQuiz]/skillsplashstore/baitSkillContext';
+import { StorageProvider } from './[BaitSkillSplashQuiz]/skillsplashstore/baitSkillContext';
 import { NavigationContainer } from '@react-navigation/native';
+
+// app main
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Context>
+      <StorageProvider>
         <BaitSkillStackNavigator />
-      </Context>
+        <Toast position="top" topOffset={40} />
+      </StorageProvider>
     </NavigationContainer>
   );
 };

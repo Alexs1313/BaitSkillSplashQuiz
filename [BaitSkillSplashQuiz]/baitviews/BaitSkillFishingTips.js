@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useStore } from '../skillsplashstore/baitSkillContext';
+import LinearGradient from 'react-native-linear-gradient';
 
 const BaitSkillFishingTips = () => {
   const router = useNavigation();
@@ -84,12 +85,12 @@ const BaitSkillFishingTips = () => {
   const isSavedTip = savedTips.includes(currentTip);
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#004F6F' }}>
+    <LinearGradient colors={['#056085ff', '#012c45ff']} style={{ flex: 1 }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[styles.baitSkillScrollView]}
       >
-        <View style={[styles.baitSkillWrap, { paddingTop: height * 0.04 }]}>
+        <View style={[styles.baitSkillWrap, { paddingTop: height * 0.07 }]}>
           <View style={styles.baitSkillHeader}>
             <TouchableOpacity
               onPress={() => router.goBack()}
@@ -146,7 +147,7 @@ const BaitSkillFishingTips = () => {
           }}
         />
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 

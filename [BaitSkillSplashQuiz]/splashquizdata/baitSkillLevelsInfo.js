@@ -7,12 +7,12 @@ export const baitSkillLevelsInfo = [
         baitskillimage: require('../assets/baitSkillImages/quizlvl1.1.png'),
         baitskillquestion: 'What is this?',
         baitskilloptions: [
-          'Single Hook',
           'Split Ring',
+          'Single Hook',
           'Fishing Swivel',
           'Jig Head',
         ],
-        baitskillcorrectIndex: 0,
+        baitskillcorrectIndex: 1,
       },
       {
         baitskillimage: require('../assets/baitSkillImages/quizlvl1.2.png'),
@@ -28,8 +28,8 @@ export const baitSkillLevelsInfo = [
       {
         baitskillimage: require('../assets/baitSkillImages/quizlvl1.3.png'),
         baitskillquestion: 'Which fish is this?',
-        baitskilloptions: ['Crucian Carp', 'Common Roach', 'Tench', 'Bream'],
-        baitskillcorrectIndex: 0,
+        baitskilloptions: ['Common Roach', 'Tench', 'Crucian Carp', 'Bream'],
+        baitskillcorrectIndex: 2,
       },
       {
         baitskillimage: require('../assets/baitSkillImages/quizlvl1.4.png'),
@@ -46,12 +46,12 @@ export const baitSkillLevelsInfo = [
         baitskillimage: require('../assets/baitSkillImages/quizlvl1.5.png'),
         baitskillquestion: 'Which fish is this?',
         baitskilloptions: [
-          'Common Carp',
           'Grass Carp',
           'Silver Carp',
           'Bighead Carp',
+          'Common Carp',
         ],
-        baitskillcorrectIndex: 0,
+        baitskillcorrectIndex: 3,
       },
       {
         baitskillimage: require('../assets/baitSkillImages/quizlvl1.6.png'),
