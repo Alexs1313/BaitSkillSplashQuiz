@@ -159,11 +159,6 @@ const SkillSplashHome = () => {
             buttonLabel="Saved Tips"
             buttonStyles={styles.baitSkillBtnMarg}
           />
-          <BaitSkillGradientButton
-            onButtonPress={() => router.navigate('SkillSettingsScreen')}
-            buttonLabel="Settings"
-            buttonStyles={styles.baitSkillBtnMarg}
-          />
         </View>
       </ScrollView>
     </ImageBackground>

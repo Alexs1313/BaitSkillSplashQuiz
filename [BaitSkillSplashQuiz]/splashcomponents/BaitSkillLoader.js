@@ -21,7 +21,10 @@ const BaitSkillLoader = () => {
       style={{ flex: 1 }}
     >
       <View style={styles.imageWrap}>
-        <Image source={require('../assets/baitSkillImages/baitSkillLg.png')} />
+        <Image
+          source={require('../assets/baitSkillImages/icon.png')}
+          style={styles.icon}
+        />
       </View>
 
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -46,6 +49,14 @@ const styles = StyleSheet.create({
     width: 360,
     height: 120,
     backgroundColor: 'transparent',
+  },
+  icon: {
+    width: 220,
+    height: 220,
+    resizeMode: 'contain',
+    borderRadius: 24,
+    borderWidth: 4,
+    borderColor: '#fff',
   },
 });
 
