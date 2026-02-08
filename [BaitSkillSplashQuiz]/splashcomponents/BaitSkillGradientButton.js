@@ -43,8 +43,9 @@ const s = StyleSheet.create({
   },
   baitSkillButtonText: {
     color: '#35251D',
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: buttonFont,
+    textAlign: 'center',
   },
 });
 
